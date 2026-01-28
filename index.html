@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="main-wrapper bg-dark-700">
+      <div class="container mx-auto">
+        <!------- Navigation     -->
+        <div class="flex justify-between py-5">
+          <h1>Kanban B.</h1>
+          <a
+            href="#"
+            class="rounded-md bg-gray-700 px-3.5 py-2.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            Get started
+          </a>
+        </div>
+
+        <!---------------  Section Card   ------------------>
+
+        <section class="board flex justify-between" id="card-wrapper">
+          <div class="task-box bg-brown-600 p-5 bg-gray-900 border rounded border-none w-[400px] align-center">
+            <div class="heading flex justify-between gap-5">
+              <div class="left-heading">To Do</div>
+              <div class="right-heading">Count</div>
+            </div>
+          </div>
+          <div class="task-box bg-brown-600 p-5">
+            <div class="heading flex justify-between gap-5">
+              <div class="left-heading">In Progress</div>
+              <div class="right-heading">Count</div>
+            </div>
+          </div>
+          <div class="task-box bg-brown-600 p-5">
+            <div class="heading flex justify-between gap-5">
+              <div class="left-heading">Done</div>
+              <div class="right-heading">Count</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

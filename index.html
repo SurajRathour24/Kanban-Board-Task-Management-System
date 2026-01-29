@@ -11,7 +11,7 @@
         font-weight: 400;
       }
       .task-box {
-        transition: all cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
       }
       .task-list {
         cursor: grab;
@@ -20,7 +20,7 @@
       section .task-box.hover {
         border: 2px dotted;
         border-radius: 5px;
-        transform: scale(1.03);
+        scale: 1.03;
       }
       body {
         background: #000 !important;
@@ -79,18 +79,7 @@
                 <div class="right-heading">Count</div>
               </div>
             </div>
-            <div
-              class="task-list bg-gray-800 p-5 m-4 rounded-md"
-              draggable="true"
-            >
-              <h2 class="text-3xl mb-3 font-semibold">Task 1</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-              <button
-                class="bg-red-500 text-white px-4 py-2 rounded-md mt-3 cursor-pointer hover:bg-red-800"
-              >
-                Delete
-              </button>
-            </div>
+
           </div>
 
           <div id="done"
@@ -102,21 +91,7 @@
                 <div class="right-heading">Count</div>
               </div>
             </div>
-            <div
-              class="task-list bg-gray-800 p-5 m-4 rounded-md"
-              draggable="true"
-            >
-              <h2 class="text-3xl mb-3 font-semibold">Task 1</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Inventore...
-              </p>
-              <button
-                class="bg-red-500 text-white px-4 py-2 rounded-md mt-3 cursor-pointer hover:bg-red-800"
-              >
-                Delete
-              </button>
-            </div>
+
           </div>
         </section>
       </div>

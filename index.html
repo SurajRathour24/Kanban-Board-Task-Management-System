@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .task-box {
+        transition: all cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      .task-list {
+        cursor: grab;
+      }
+
+      section .task-box.hover {
+        border: 2px dotted;
+        border-radius: 5px;
+        transform: scale(1.03);
+      }
+      body {
+        background: #000 !important;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <div class="main-wrapper bg-dark-700">
@@ -13,7 +36,7 @@
           <h1>Kanban B.</h1>
           <a
             href="#"
-            class="rounded-md bg-gray-700 px-3.5 py-2.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            class="rounded-md bg-gray-700 px-3.5 py-2.5 text-sm font-semifont-semibold text-white inset-ring inset-ring-white/5 hover:bg-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Add New Task
           </a>
@@ -21,8 +44,11 @@
 
         <!---------------  Section Card   ------------------>
 
-        <section class="board block md:flex justify-between gap-10" id="card-wrapper">
-          <div
+        <section
+          class="board block md:flex justify-between gap-10"
+          id="card-wrapper"
+        >
+          <div id="todo"
             class="task-box bg-brown-600 bg-gray-950 border-2 border-indigo-300 rounded-md h-[80vh] w-100"
           >
             <div class="heading-box bg-gray-900 border-b-1 px-5 py-4">
@@ -31,41 +57,70 @@
                 <div class="right-heading">Count</div>
               </div>
             </div>
-            <div class="task-list">
-              <h2>Task 1</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore architecto modi quam, voluptate accusantium incidunt, numquam voluptates beatae optio molestiae neque eligendi iste laboriosam cumque praesentium accusamus laborum tenetur. At!</p>
-              <button class="bg-red-500 text-white">Delete</button>
+            <div
+              class="task-list bg-gray-800 p-5 m-4 rounded-md"
+              draggable="true"
+            >
+              <h2 class="text-3xl mb-3 font-semibold">Task 1</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+              <button
+                class="bg-red-500 text-white px-4 py-2 rounded-md mt-3 cursor-pointer hover:bg-red-800"
+              >
+                Delete
+              </button>
             </div>
           </div>
-          <div class="task-box bg-brown-600 bg-gray-950 border-2 border-indigo-300 rounded-md h-[80vh] w-100">
+          <div id="in-progress"
+            class="task-box bg-brown-600 bg-gray-950 border-2 border-indigo-300 rounded-md h-[80vh] w-100"
+          >
             <div class="heading-box bg-gray-900 border-b-1 px-5 py-4">
               <div class="flex justify-between gap-5">
                 <div class="left-heading">In Progress</div>
                 <div class="right-heading">Count</div>
               </div>
             </div>
-            <div class="task-list">
-              <h2>Task 1</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore architecto modi quam, voluptate accusantium incidunt, numquam voluptates beatae optio molestiae neque eligendi iste laboriosam cumque praesentium accusamus laborum tenetur. At!</p>
-              <button class="bg-red-500 text-white">Delete</button>
+            <div
+              class="task-list bg-gray-800 p-5 m-4 rounded-md"
+              draggable="true"
+            >
+              <h2 class="text-3xl mb-3 font-semibold">Task 1</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+              <button
+                class="bg-red-500 text-white px-4 py-2 rounded-md mt-3 cursor-pointer hover:bg-red-800"
+              >
+                Delete
+              </button>
             </div>
           </div>
-          
-          <div class="task-box bg-brown-600 bg-gray-950 border-2 border-indigo-300 rounded-md h-[80vh] w-100">
+
+          <div id="done"
+            class="task-box bg-brown-600 bg-gray-950 border-2 border-indigo-300 rounded-md h-[80vh] w-100"
+          >
             <div class="heading-box bg-gray-900 border-b-1 px-5 py-4">
               <div class="flex justify-between gap-5">
                 <div class="left-heading">Done</div>
                 <div class="right-heading">Count</div>
               </div>
             </div>
-            <div class="task-list">
-              <h2>Task 1</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore architecto modi quam, voluptate accusantium incidunt, numquam voluptates beatae optio molestiae neque eligendi iste laboriosam cumque praesentium accusamus laborum tenetur. At!</p>
-              <button class="bg-red-500 text-white">Delete</button>
+            <div
+              class="task-list bg-gray-800 p-5 m-4 rounded-md"
+              draggable="true"
+            >
+              <h2 class="text-3xl mb-3 font-semibold">Task 1</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore...
+              </p>
+              <button
+                class="bg-red-500 text-white px-4 py-2 rounded-md mt-3 cursor-pointer hover:bg-red-800"
+              >
+                Delete
+              </button>
             </div>
           </div>
         </section>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
